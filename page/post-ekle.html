@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yeni Post</title>
+  <link rel="stylesheet" href="tasarim.css" />
+  <script src="/socket.io/socket.io.js"></script>
+  <script defer src="page.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="/"><img src="logos/logo2.png" width="125" height="125" alt="Pinora" /></a>
+    </div>
+    <nav>
+      <a href="users.html">Kullanıcılar</a>
+      <a href="post-ekle.html" class="active">Post Ekle</a>
+      <a href="hesap.html">Hesap</a>
+    </nav>
+  </header>
+
+  <form class="post-form" action="/add-post" method="post" enctype="multipart/form-data">
+    <h2>Yeni Bir Gönderi Paylaş</h2>
+
+    <div class="upload-box">
+      <label style="display:flex;justify-content:center;align-items:center;text-align:center;height:80%;width:80%;opacity:.5;cursor:pointer;padding:10px;background:#007BFF;color:#fff;border-radius:5px;position:relative;">
+        Dosya Seç
+        <input type="file" name="image" accept="image/*"
+               style="position:absolute;left:0;top:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:large" required>
+      </label>
+    </div>
+
+    <input name="title" class="send" maxlength="20" type="text" placeholder="Başlık" required />
+    <textarea name="description" placeholder="Açıklama" maxlength="100"></textarea>
+
+    <button type="submit">Paylaş</button>
+  </form>
+</body>
+</html>

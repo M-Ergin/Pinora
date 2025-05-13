@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hesap</title>
+  <link rel="stylesheet" href="tasarim.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="page.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="/">
+        <img src="logos/logo2.png" width="125px" height="125px" alt="Pinora" />
+      </a>
+    </div>
+    <nav>
+      <a href="users.html">Kullanıcılar</a>
+      <a href="post-ekle.html">Post Ekle</a>
+      <a href="hesap.html" class="active">Hesap</a>
+    </nav>
+  </header>
+
+  <!-- Account Information -->
+  <section style="position:fixed;top:150px" class="account-info" id="accountInfo" style="display:none;">
+    <h2>Hesap Bilgileri</h2>
+    <p><strong>Ad & Soyad:</strong> <span id="fullName"></span></p>
+    <p><strong>Kullanıcı Adı:</strong> <span id="username"></span></p>
+    <p><strong>E-posta:</strong> <span id="email"></span></p>
+    <button id="logoutButton">Çıkış Yap</button>
+  </section>
+
+</body>
+</html>

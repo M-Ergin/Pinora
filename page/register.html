@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giriş & Kayıt</title>
+  <link rel="stylesheet" href="tasarim.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="register.js" defer></script>
+  <script src="page.js"></script>
+</head>
+<body>
+
+  <main class="login-register">
+    <!-- Giriş Formu -->
+    <section class="login" id="loginBox">
+      <h2>Giriş Yap</h2>
+
+      <form id="loginForm" onsubmit="login(event)">
+        <input  type="text"     id="loginUsername"
+                name="username" placeholder="Kullanıcı Adı veya E‑posta"
+                autocomplete="username" required>
+
+        <input  type="password" id="loginPassword"
+                name="password" placeholder="Parola"
+                autocomplete="current-password" required>
+
+        <div class="entryBttn">
+          <button type="submit">Giriş Yap</button>
+          <button type="button" onclick="registerPage()">Hesap Oluştur</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Kayıt Formu -->
+    <section class="register" id="registerBox" style="display:none;">
+      <h2>Hesap Oluştur</h2>
+
+      <form id="registerForm" onsubmit="submitRegister(event)">
+        <input  type="text"  id="registerFullName"
+                name="fullName"  placeholder="Ad & Soyad" required>
+
+        <input  type="text"  id="registerUsername"
+                name="username"  placeholder="Kullanıcı Adı"
+                autocomplete="username" required>
+
+        <input  type="email" id="registerEmail"
+                name="email"     placeholder="E‑posta Adresi"
+                autocomplete="email" required>
+
+        <input  type="password" id="registerPassword"
+                name="password"  placeholder="Parola"
+                autocomplete="new-password" required>
+
+        <input  type="password" id="registerConfirmPassword"
+                placeholder="Parolayı Tekrar Giriniz"
+                autocomplete="new-password" required>
+
+        <div class="entryBttn">
+          <button type="submit">Hesap Oluştur</button>
+          <button type="button" onclick="loginPage()">Giriş Yap</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>

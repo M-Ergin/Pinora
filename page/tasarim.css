@@ -1,0 +1,248 @@
+html, body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #FFFAFA;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px; /* navbar yüksekliği kadar boşluk bırak */
+}
+
+.navbar {
+  background: linear-gradient(to right, #2bd5f3, #0f58c3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  height: 50px;
+  top: 0;
+  position: fixed;
+  width: 97%;
+  z-index: 999;
+}
+
+.navbar .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: -40px;
+}
+
+.navbar nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.navbar nav a:hover {
+  background-color: #ffffffb6;
+  color: #0f58c3;
+  border-radius: 10px;
+}
+
+.navbar nav a.active {
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #0f58c3;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.gallery {
+  position: fixed;
+  top: 15%;
+  width: 80%;
+  height: 75vh; /* Görünüm yüksekliğinin %60’ı kadar */
+  background-color: #2bd5f371;
+  padding: 1rem;
+  overflow-y: auto; /* Taşan içerik dikeyde kaydırılsın */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 20px;
+  z-index: 1;
+  scroll-snap-type: y mandatory; 
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  width: 70%;
+  height: 98%;
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  margin: 10px;
+  scroll-snap-align: center;
+}
+
+.card a{
+  width: 65%;
+  height:65%;
+}
+
+.card img {
+  width: 95%;
+  height:95%;
+  margin:10px;
+  object-fit: cover;
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  object-fit: contain;
+}
+
+.descbox{
+  display: grid;
+  grid-template-columns: auto 80px;
+  width: 80%;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  border-radius: 25px;
+  margin: 10px;
+  height: 80px;
+}
+
+.descbox p{
+  width: 400px;
+  word-wrap: break-word;
+}
+
+.descbox button{
+  font-size: x-large;
+  text-align: left;
+  height: fit-content;
+  width: fit-content;
+}
+
+.login-register {
+  top: 150px;
+  display: flex;
+  position:fixed;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.login, .register {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 2px solid #2bd5f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register{
+  display: none;
+}
+
+.login input, .register input {
+  display: block;
+  width: 80%;
+  margin: 1rem 0;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #0f58c3;
+  font-size: large;
+}
+
+textarea {
+  display: block;
+  width: 80%;
+  margin: 1rem 0;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #0f58c3;
+  font-size: large;
+  overflow-y: auto;
+  resize: vertical;
+  height: 100px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.send {
+  display: block;
+  width: 80%;
+  margin: 1rem 0;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #0f58c3;
+  font-size: large;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  background: linear-gradient(to right, #2bd5f3, #0f58c3);
+  border: none;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.post-form {
+  position:fixed;
+  top: 10%;
+  padding: 2rem;
+  max-width: 800px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-box {
+  border: 2px dashed #0f58c3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  height: 30%;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 1rem;
+  background-color: white;
+}
+
+.upPhoto{
+  font-size: large;
+  padding: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.activeUsr{
+  position: fixed;
+  bottom: 50px;
+}

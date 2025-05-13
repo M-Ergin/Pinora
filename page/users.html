@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kullanıcılar</title>
+  <link rel="stylesheet" href="tasarim.css"/>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="page.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="/"><img src="logos/logo2.png" width="125" height="125" alt="Pinora"/></a>
+    </div>
+    <nav>
+      <a href="users.html" class="active">Kullanıcılar</a>
+      <a href="post-ekle.html">Post Ekle</a>
+      <a href="hesap.html">Hesap</a>
+    </nav>
+  </header>
+
+  <main style="position: fixed;top:150px" class="user-list">
+    <h2>Kayıtlı Kullanıcılar</h2>
+    <ul id="userList">
+      <!-- JS ile doldurulacak -->
+    </ul>
+  </main>
+</body>
+</html>
